@@ -22,11 +22,11 @@ def devision11(Number11):
     print("start re dev11")   
     for indexArrayNumber11 in reversed(ArrayNumber11):
         SumNumber11 = SumNumber11 + sign11 * indexArrayNumber11
+        print(indexArrayNumber11, sign11 ,SumNumber11)
         if sign11 == 1: 
             sign11 = -1
         else :
             sign11 = 1
-        print(SumNumber11)
     # print("stop dev11")
 
     return SumNumber11
