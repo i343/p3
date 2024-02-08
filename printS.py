@@ -20,26 +20,46 @@ def chAudioDir():
 
 chAudioDir()
 
-c1 = {
-  "name" : "Ee",
-  "year" : 2004
-}
-c2 = {
-  "name" : "Tt",
-  "year" : 2007
-}
-c3 = {
-  "name" : "lL",
-  "year" : 2011
+verb1 = {
+  "inf" : "be",
+  "inf1": "was",
+  "inf2": "were",
+  "inf3": "been",
+  "rate" : 2004
 }
 
-fm = {
-  "ch1" : c1,
-  "ch2" : c2,
-  "ch3" : c3
+verb2 = {
+  "inf" : "become",
+  "rate" : 2007
 }
 
-print(fm["ch2"]["name"])
+verb3 = {
+  "inf" : "do",
+  "rate" : 2011
+}
+
+irrVerb = {
+  "be" : verb1,
+  "become" : verb2,
+  "do" : verb3
+}
+
+print(irrVerb["be"]["inf"])
+print(irrVerb["be"]["inf1"])
+print(irrVerb["be"]["inf2"])
+print(irrVerb["be"]["inf3"])
+print(irrVerb["be"]["inf"])
+print(irrVerb)
+
+print("\nstart for irrVerb \n")
+for indexIrrVerb in irrVerb:
+  print(indexIrrVerb)
+  print(irrVerb[indexIrrVerb])
+  for indexVerb in irrVerb[indexIrrVerb]:
+    print(indexVerb , " -> " , irrVerb[indexIrrVerb][indexVerb])
+  print("---")
+  
+print(verb1)
 
 myf = {
   "c1" : {
@@ -55,5 +75,5 @@ myf = {
     "year" : 2011
   }
 }
-
+print("stroka 62")
 print(myf["c1"]["name"])
