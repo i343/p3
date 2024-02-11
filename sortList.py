@@ -82,3 +82,34 @@ selection_sort(l)
 print(l)
 print
 
+
+student_tuples = [
+    ('anne', 'A', 15),
+    ('olha', 'B', 12),
+    ('dave', 'B', 10),
+]
+
+student_sort_age = sorted(student_tuples, key=lambda student: student[2])   # sort by age
+student_sortname = sorted(student_tuples, key=lambda student: student[0])   # sort by name
+
+print(student_tuples)
+print(student_sort_age)
+print(student_sortname)
+
+from operator import itemgetter, attrgetter
+
+dictABC = itemgetter(1)('ABCDEFG')
+print(dictABC)
+
+dictABC = itemgetter(1, 6, 5)('ABCDEFG')
+print(dictABC)
+
+dictABC = itemgetter(slice(2, None))('ABCDEFG')
+print(dictABC)
+
+dictABC = dict(rank='Captain', name='d0tterbart')
+print(dictABC)
+rank0 = itemgetter('rank')(dictABC)
+name0 = itemgetter('name')(dictABC)
+
+print(rank0 , name0)
