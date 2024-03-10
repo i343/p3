@@ -1,0 +1,18 @@
+[
+   {
+      "studentid": 1,
+      "name": "ABC",
+      "subjects": [
+         "Python",
+         "Data Structures"
+      ]
+   },
+   {
+      "studentid": 2,
+      "name": "PQR",
+      "subjects": [
+         "Java",
+         "Operating System"
+      ]
+   }
+]
