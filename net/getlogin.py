@@ -23,6 +23,14 @@ inputLoginGet = input(inputLoginStr)
 if inputLoginGet != "": nameLogin = inputLoginGet
 print("login -> ",nameLogin)
 
+import platform
+print("uname -> ", platform.uname())
+print("system ->", platform.system())
+print("node ->", platform.node())
+
+import socket
+print("socet -> ", socket.gethostname())
+
 # print("path user ->", os.path.expanduser('~'))
 # print("get uid ->", os.environ.get('UID'))
 # print("get logname ->", os.environ.get('LOGNAME'))
