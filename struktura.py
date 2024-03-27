@@ -23,7 +23,7 @@ print(x, "x")
 
 print("сложное")
 numstring = "3.1415926"
-y = float(numstring) 
+y = float(numstring)
 
 print("y has type", type(y))
 print(y, "y")
