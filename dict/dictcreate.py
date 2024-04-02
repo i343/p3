@@ -1,28 +1,47 @@
 # A dictionary in Python is a data structure that stores the value in key:value pairs.
 # https://www.geeksforgeeks.org/python-dictionary/
-Dict0 = {1: 'Geeks', 2: 'For', 3: 'Geeks'}
+
+
+
+Dict0 = {
+    1: 'Geeks', 
+    2: 'For', 
+    3: 'Geeks'
+    }
 print(Dict0)
 
 
-
 # dictionary can be created by placing a sequence of elements within curly {} braces, separated by a ‘comma’.
-Dict1 = {1: 'Geeks', 2: 'For', 3: 'Geeks'}
+Dict1 = {
+    1: 'Geeks', 
+    2: 'For', 
+    3: 'Geeks'
+    }
 print("\nDictionary with the use of Integer Keys: ")
 print(Dict1)
 
 
-Dict2 = {'Name': 'Geeks', 1: [1, 2, 3, 4]}
+Dict2 = {
+    'Name': 'Geeks', 
+    1: [1, 2, 3, 4]
+    }
 print("\nDictionary with the use of Mixed Keys: ")
 print(Dict2)
 
 # Different Ways to Create a Python Dictionary
 
 Dict4 = {}
-print("Empty Dictionary: ")
+print("Empty Dictionary: - 34")
 print(Dict4)
 
-Dict5 = dict({1: 'Geeks', 2: 'For', 3: 'Geeks'})
-print("\nDictionary with the use of dict(): ")
+Dict5 = dict(
+    {
+    1: 'Geeks', 
+    2: 'For', 
+    3: 'Geeks',
+    }
+    )
+print("\nDictionary with the use of dict(): - 44")
 print(Dict5)
 
 Dict6 = dict(
@@ -30,7 +49,7 @@ Dict6 = dict(
         (1, 'Geeks'), 
         (2, 'For'),
      ])
-print("\nDictionary with each item as a pair: ")
+print("\nDictionary with each item as a pair: - 52")
 print(Dict6)
 
 # Nested Dictionaries
