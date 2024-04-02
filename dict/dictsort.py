@@ -1,7 +1,7 @@
 # Sort Python Dictionaries by Key or Value
 # Sorting Dictionary By Key
 from collections import OrderedDict, defaultdict
-
+import sys
 
 myDict0 = {'ravi': 10, 'rajnish': 9,
         'sanjeev': 15, 'yash': 2, 'suraj': 32}
@@ -123,3 +123,147 @@ print(dict0, "0")
 print(dict1, "1")
 print(dict3, "3")
 print(dict4, "4")
+
+# Ways to sort list of dictionaries by values in Python – Using lambda function
+# Python code demonstrate the working of
+# sorted() with lambda
+
+# Initializing list of dictionaries
+list99 = [
+    {"name": "Nandini", "age": 21},
+	{"name": "Manjeet", "age": 20},
+	{"name": "Nikhil", "age": 19},
+    ]
+
+print("_______________________________________________________")
+print(list99, 'list99')
+
+# using sorted and lambda to print list sorted
+# by age
+print("The list printed sorting by age: ")
+print(sorted(list99, key=lambda i: i['age']))
+
+print("\r")
+
+# using sorted and lambda to print list sorted
+# by both age and name. Notice that "Manjeet"
+# now comes before "Nandini"
+print("The list printed sorting by age and name: ")
+print(sorted(list99, key=lambda i: (i['age'], i['name'])))
+
+print("\r")
+
+# using sorted and lambda to print list sorted
+# by age in descending order
+print("The list printed sorting by age in descending order: ")
+print(sorted(list99, key=lambda i: i['age'], reverse=True))
+
+# Ways to sort list of dictionaries by values in Python – Using itemgetter
+
+# Python code demonstrate the working of sorted()
+# and itemgetter
+
+# importing "operator" for implementing itemgetter
+from operator import itemgetter
+
+print("_______________________________________________________")
+
+list66 = list99.copy()
+
+print(list66, 'list66')
+print(list99, 'list66')
+
+# using sorted and itemgetter to print list sorted by age
+print ("The list printed sorting by age: ")
+print (sorted(list66, key=itemgetter('age')))
+
+print("\r")
+
+# using sorted and itemgetter to print
+# list sorted by both age and name
+# notice that "Manjeet" now comes before "Nandini"
+print ("The list printed sorting by age and name: ")
+print (sorted(list66, key=itemgetter('name','age')))
+
+print("\r")
+
+# using sorted and itemgetter to print list
+# sorted by age in descending order
+print ("The list printed sorting by age in descending order: ")
+print (sorted(list66, key=itemgetter('age'), reverse=True))
+
+print("Size of dic1: " + str(sys.getsizeof(list99)) + "bytes")
+print("Size of dic1: " + str(sys.getsizeof(list66)) + "bytes")
+
+print()
+# Python dictionary with keys having multiple inputs
+
+# Python code to demonstrate a dictionary
+# with multiple inputs in a key.
+import random as rn
+
+# creating an empty dictionary
+dict78 = {}
+
+# Insert first triplet in dictionary
+x, y, z = 10, 20, 30
+dict78[x, y, z] = x + y - z;
+print(x, "x")
+print(dict78, "dict78")
+dict78[x] = x + 10
+print(dict78[x], "214")
+dict78[y] = y + 20
+dict78[z] = z + 20 
+print(dict78[x], "217")
+
+# Insert second triplet in dictionary
+x, y, z = 5, 2, 4
+dict78[x, y, z] = x + y - z;
+
+# print the dictionary
+print(dict78)
+
+# Python dictionary with keys having multiple inputs to get access to the keys. 
+
+#  dictionary containing longitude and latitude of places
+places = {("19.07'53.2", "72.54'51.0"):"Mumbai", \
+          ("28.33'34.1", "77.06'16.6"):"Delhi"}
+ 
+print(places)
+print('\n')
+ 
+# Traversing dictionary with multi-keys and creating
+# different lists from it
+lat = []
+long = []
+plc = []
+for i in places:
+    lat.append(i[0])
+    long.append(i[1])
+    plc.append(places[i[0], i[1]])
+ 
+print(lat, "lat")
+print(long, "log")
+print(plc, "plc")
+
+
+print("-------------==-----------")
+
+# Python dictionary with keys having multiple inputs
+# Creating a dictionary with multiple inputs for keys
+data = {
+	(1, "John", "Doe"): {"a": "geeks", "b": "software", "c": 75000},
+	(2, "Jane", "Smith"): {"e": 30, "f": "for", "g": 90000},
+	(3, "Bob", "Johnson"): {"h": 35, "i": "project", "j": "geeks"},
+	(4, "Alice", "Lee"): {"k": 40, "l": "marketing", "m": 100000}
+}
+
+# Accessing the values using the keys
+print(data[(1, "John", "Doe")]["a"])
+print(data[(2, "Jane", "Smith")]["f"])
+print(data[(3, "Bob", "Johnson")]["j"])
+
+data[(1, "John", "Doe")]["a"] = {"b": "marketing", "c": 75000};
+data[(3, "Bob", "Johnson")]["j"] = {"h": 35, "i": "project"};
+print(data[(1, "John", "Doe")]["a"]);
+print(data[(3, "Bob", "Johnson")]["j"]);

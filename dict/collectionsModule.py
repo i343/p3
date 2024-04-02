@@ -240,3 +240,92 @@ de12.popleft()
 print ("The deque after deleting from left is : ") 
 print (de12)
 
+# Python program to demonstrate 
+# userdict 
+      
+  
+# Creating a Dictionary where 
+# deletion is not allowed 
+class MyDict2(UserDict): 
+      
+    # Function to stop deletion 
+    # from dictionary 
+    # def __del__(self): 
+    #     raise RuntimeError("Deletion not allowed - 0") 
+          
+    # Function to stop pop from  
+    # dictionary 
+    def pop(self, s = None): 
+        raise RuntimeError("Deletion not allowed - 1") 
+          
+    # Function to stop popitem  
+    # from Dictionary 
+    def popitem(self, s = None): 
+        raise RuntimeError("Deletion not allowed - 2") 
+
+    # Function to stop deletion 
+    # from List 
+    def remove(self, s = None): 
+        raise RuntimeError("Deletion not allowed - 3") 
+      
+# Driver's code 
+d267 = MyDict2({'a':1, 
+    'b': 2, 
+    'c': 3})
+  
+# d267.pop(4)
+
+
+# Creating a List where 
+# deletion is not allowed 
+class MyList(UserList): 
+      
+    # Function to stop deletion 
+    # from List 
+    def remove(self, s = None): 
+        raise RuntimeError("Deletion not allowed - 11") 
+          
+    # Function to stop pop from  
+    # List 
+    def pop(self, s = None): 
+        raise RuntimeError("Deletion not allowed - 12") 
+
+# Driver's code 
+L = MyList([1, 2, 3, 4]) 
+  
+print("Original List") 
+  
+# Inserting to List" 
+L.append(5) 
+print("After Insertion") 
+print(L) 
+  
+# Deleting From List 
+# L.remove() 
+
+# class collections.UserString(seq)
+
+# Creating a Mutable String 
+class Mystring0(UserString): 
+      
+    # Function to append to 
+    # string 
+    def append(self, s): 
+        self.data += s 
+          
+    # Function to remove from  
+    # string 
+    def remove(self, s): 
+        self.data = self.data.replace(s, "") 
+      
+# Driver's code 
+s10 = Mystring0("Geeks") 
+print("Original String:", s10.data) 
+  
+# Appending to string 
+s10.append("s") 
+print("String After Appending:", s10.data) 
+  
+# Removing from string 
+s10.remove("e") 
+print("String after Removing:", s10.data)
