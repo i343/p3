@@ -20,11 +20,15 @@ print("Sum1 :", returnSum0(dict0))
 # Function to print sum
 
 
-def returnSum1(dict):
+def returnSum1(dict1:dict) -> int:
 	sum = 0
-	for i in dict.values():
-		print(i, "26")
+	lenSum = 0
+	for i in dict1.values():
+		len_i = len(str(i))
+		print(i, "26", len_i)
 		sum = sum + i
+		lenSum = lenSum + len_i
+	print( sum, lenSum, "31")
 	return sum
 
 # Driver Function
