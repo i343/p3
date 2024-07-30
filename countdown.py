@@ -1,4 +1,5 @@
 # countdown.py
+# moves the cursor to the start
 
 from time import sleep
 

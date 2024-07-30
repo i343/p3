@@ -1,0 +1,1 @@
+https://www.kangaroo.com.ua/index.php?r=conreq/restable_ukr&student=050001&schoolId=010103&student_name=%25D0%259A%25D0%25BE%25D1%2581%25D1%2582%25D0%25B5%25D0%25BD%25D0%25BA%25D0%25BE&student_middle_name=%25D0%2590%25D0%25BD%25D0%25B0%25D1%2581%25D1%2582%25D0%25B0%25D1%2581%25D1%2596%25D1%258F
