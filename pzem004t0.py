@@ -56,14 +56,20 @@ class PZEM:
 			raise Exception("Wrong checksum")
 			
 	def isReady(self):
-		self.ser.write(serial.to_bytes(self.setAddrBytes))
+		selfsetAddrBytes =  self.setAddrBytes
+		serialTobytes =	serial.to_bytes(selfsetAddrBytes)
+		self_ser_write = self.ser.write(serialTobytes)
 		rcv = self.ser.read(7)
+		print("63 rcv ->", rcv)
+		print("selfsetAddrBytes ->", selfsetAddrBytes)
+		print("serialTobytes ->",serialTobytes)
+		print("self_ser_write ->",self_ser_write)
 		if len(rcv) == 7:
 			unpacked = struct.unpack("!7B", rcv)
 			if(self.checkChecksum(unpacked)):
 				return True
 		else:
-			raise serial.SerialTimeoutException("Timeout setting address")
+			raise serial.SerialTimeoutException("66 -> Timeout setting address")
 
 	def readVoltage(self):
 		self.ser.write(serial.to_bytes(self.readVoltageBytes))

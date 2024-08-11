@@ -1,3 +1,6 @@
 __pycache__/
 *.log
 .DS_Store
+*.pdf
+.p3/
+.s0c/
