@@ -77,3 +77,5 @@ myf = {
 }
 print("stroka 62")
 print(myf["c1"]["name"])
+
+print('Done! 2024')

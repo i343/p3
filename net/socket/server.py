@@ -8,8 +8,8 @@ import string
 server_object = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
 
 # Connecting to the localhost
-ip_address = '127.0.0.1'
-port = 5555
+ip_address = '192.168.0.66'
+port = 6767
 server_object.bind((ip_address, port))
 server_object.listen()
 
