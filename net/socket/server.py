@@ -24,7 +24,7 @@ if connection_object:
     print("SERVER CONNECTED TO CLIENT")
     
     # sending initial message to the client
-    connection_object.send(b"type the message")
+    connection_object.send(b"type the message : ")
     
     # receiving message from the client
     data_receive = connection_object.recv(1024)
