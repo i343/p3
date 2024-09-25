@@ -1,6 +1,6 @@
 # A dictionary in Python is a data structure that stores the value in key:value pairs.
 # https://www.geeksforgeeks.org/python-dictionary/
-
+import json
 
 
 Dict0 = {
@@ -8,7 +8,7 @@ Dict0 = {
     2: 'For', 
     3: 'Geeks'
     }
-print(Dict0)
+print(Dict0, "<= Dict0")
 
 
 # dictionary can be created by placing a sequence of elements within curly {} braces, separated by a ‘comma’.
@@ -18,7 +18,9 @@ Dict1 = {
     3: 'Geeks'
     }
 print("\nDictionary with the use of Integer Keys: ")
-print(Dict1)
+print(Dict1, "<= Dict1")
+jsonDict1 = json.dumps(Dict1, ensure_ascii=False, indent=4)
+print(jsonDict1)
 
 
 Dict2 = {
@@ -26,13 +28,15 @@ Dict2 = {
     1: [1, 2, 3, 4]
     }
 print("\nDictionary with the use of Mixed Keys: ")
-print(Dict2)
+print(Dict2, "<= Dict2")
+jsonDict2 = json.dumps(Dict2, ensure_ascii=False, indent=4)
+print(jsonDict2)
 
 # Different Ways to Create a Python Dictionary
 
 Dict4 = {}
 print("Empty Dictionary: - 34")
-print(Dict4)
+print(Dict4, "<= Dict4")
 
 Dict5 = dict(
     {
@@ -42,7 +46,9 @@ Dict5 = dict(
     }
     )
 print("\nDictionary with the use of dict(): - 44")
-print(Dict5)
+print(Dict5, "<= Dict5")
+jsonDict5 = json.dumps(Dict5, ensure_ascii=False, indent=4)
+print(jsonDict5)
 
 Dict6 = dict(
     [
@@ -50,7 +56,9 @@ Dict6 = dict(
         (2, 'For'),
      ])
 print("\nDictionary with each item as a pair: - 52")
-print(Dict6)
+print(Dict6, "<= Dict6")
+jsonDict6 = json.dumps(Dict6, ensure_ascii=False, indent=4)
+print(jsonDict6)
 
 # Nested Dictionaries
 
@@ -65,7 +73,11 @@ Dict7 = {
         }
         }
 
-print(Dict7)
+print(Dict7, "<= Dict7")
+jsonDict7 = json.dumps(Dict7, ensure_ascii=False, indent=4)
+print(jsonDict7)
+
+input()
 
 # Adding Elements to a Dictionary
 #  Add Items to a Python Dictionary with Different DataTypes
